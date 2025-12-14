@@ -1,0 +1,161 @@
+
+/* Jellyfish Clean Dark Theme */
+:root {
+    /* Neutral graue Primärfarbe für Akzente */
+    --primary-r: 48;
+    --primary-g: 57;
+    --primary-b: 73;
+    --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
+    --secondary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.7);
+
+    /* Dezent transparente Akzent-Hintergründe */
+    --primary-background-transparent: rgba(255, 255, 255, 0.03);
+    --secondary-background-transparent: rgba(255, 255, 255, 0.06);
+
+
+
+    --alt-accent-color: #ffffff1f;
+
+    /* Header leicht transparent und dunkler */
+    --header-background-color: rgba(25, 25, 25, 0.5);
+
+    /* Footer-Message neutraler gehalten */
+    --footer-message: "Dark Clean • Relax and stream";
+
+    /* Alternate accents (abgedunkelte Varianten der Primärfarbe) */
+    --primary-alt1: rgba(calc(var(--primary-r) - 20), calc(var(--primary-g) - 20), calc(var(--primary-b) - 20), 1);
+    --primary-alt2: rgba(calc(var(--primary-r) - 20), calc(var(--primary-g) - 20), calc(var(--primary-b) - 20), 0.85);
+    --primary-alt3: rgba(calc(var(--primary-r) - 20), calc(var(--primary-g) - 20), calc(var(--primary-b) - 20), 0.7);
+    --primary-alt4: rgba(calc(var(--primary-r) - 20), calc(var(--primary-g) - 20), calc(var(--primary-b) - 20), 0.55);
+    --primary-alt5: rgba(calc(var(--primary-r) - 20), calc(var(--primary-g) - 20), calc(var(--primary-b) - 20), 0.4);
+}
+
+:root {
+    --logo: none;
+
+/* Globaler Text */
+body,
+html,
+* {
+  color: #ffffff !important;
+}
+
+.button,
+.emby-button,
+.raised,
+.button-submit,
+.fab,
+.detailButton.btnPlay.emby-button {
+    background-color: var(--button-bg-color) !important;
+    color: var(--button-text-color) !important;
+}
+
+/* Haupt-Buttons auf Detailseite */
+.favorite-button,
+.detailButton.detail-button,
+.detailButton.btnPlay.play-button {
+    background-color: rgba(25, 25, 25, 0.5) !important;
+    color: var(--button-text-color) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+/* Tab-Buttons in der mittleren Insel - Text bleibt weiß beim Hover */
+.emby-tabs-slider .emby-tab-button:hover,
+.emby-tabs-slider .emby-tab-button:hover .emby-button-foreground,
+.emby-tabs-slider .emby-tab-button:hover * {
+    color: #c8c8c8 !important;
+}
+
+/* Aktiver Tab-Button - Text bleibt ebenfalls weiß */
+.emby-tabs-slider .emby-tab-button-active,
+.emby-tabs-slider .emby-tab-button-active .emby-button-foreground,
+.emby-tabs-slider .emby-tab-button-active * {
+    color: #c8c8c8 !important;
+}
+
+/* === OPTIMIERTE VERSION: 42PX HÖHE + BESSERES SPACING === */
+
+/* Container: 42px hoch */
+.headerRight {
+    height: 42px !important;
+    max-height: 42px !important;
+    min-height: 42px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0px !important; /* Mehr Abstand zwischen Buttons */
+    padding: 0 2px 0 0 !important; /* Rechts Padding für Profilbild-Abstand */
+    margin: 0 !important;
+}
+
+/* ALLE Buttons: 40px (etwas größer) */
+.headerRight button,
+.headerRight [is="paper-icon-button-light"],
+.headerRight .headerButton,
+.headerRight .headerButtonRight,
+.headerRight .paper-icon-button-light {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    line-height: 40px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Icon-Buttons: GRÖßERE Icons */
+.headerRight .headerSyncButton,
+.headerRight .headerAudioPlayerButton,
+.headerRight .headerCastButton,
+.headerRight .headerSearchButton {
+    padding: 7px !important;
+}
+
+/* Icons GRÖßER */
+.headerRight .material-icons {
+    font-size: 20px !important;
+    line-height: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+}
+
+/* User-Button */
+.headerRight .headerUserButton,
+.headerRight .headerUserButtonRound {
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+/* Profilbild: Etwas GRÖßER */
+.headerRight .headerUserButton > div,
+.headerRight .headerUserButtonRound > div {
+    transform: scale(0.75) !important; /* Von 0.60 auf 0.75 */
+    transform-origin: center !important;
+    border-radius: 50% !important;
+}
+
+/* headerSelectedPlayer verstecken */
+.headerRight .headerSelectedPlayer {
+    display: none !important;
+}
+
+
+/* === PAUSE-BUTTON IMMER SICHTBAR === */
+
+/* Pause-Button Container (das generic mit "Pause slideshow") */
+.slides-container [aria-label*="Pause"],
+.slides-container [title*="Pause"],
+.slides-container [aria-label*="Play"],
+.slides-container [title*="Play"],
+[aria-label="Play slideshow"],
+[aria-label="Pause slideshow"] {
+    position: fixed !important;
+    top: 110px !important; /* Unter dem Header (60px + Abstand) */
+    right: 20px !important;
+}
