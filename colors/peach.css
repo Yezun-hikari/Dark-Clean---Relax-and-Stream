@@ -12,7 +12,7 @@
     --tertiary-background-color: #252525; /* Popovers */
     --alt-accent-color: #ffffff20;
     --text-color: #000000;
-    --header-background-color: #ffffff6e; /* This is header and tabs background */
+    --header-background-color: rgba(51, 44, 37, 0.5); /* This is header and tabs background */
     --background-image: url(https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish/colors/images/peach.jpg);
     --footer-message: "🍑 Peachy keen streaming machine!";
 
