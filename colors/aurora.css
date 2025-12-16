@@ -12,7 +12,7 @@
     --tertiary-background-color: #16213E; /* Popovers */
     --alt-accent-color: #ffffff20;
     --text-color: #ffffff;
-    --header-background-color: #ffffff6e; /* This is header and tabs background */
+    --header-background-color: rgba(1, 43, 36, 0.5); /* This is header and tabs background */
     --background-image: url(https://images.unsplash.com/photo-1531366936337-7c912a4589a7);
     --footer-message: "🌌 Dancing with the northern lights!";
 
